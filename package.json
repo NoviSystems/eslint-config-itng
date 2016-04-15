@@ -4,7 +4,7 @@
   "description": "ITNG's ESlint config",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -19,13 +19,20 @@
   "dependencies": {
     "eslint-config-airbnb": "^7.0.0"
   },
+  "peerDependencies": {
+    "babel-eslint": "^6.0.0"
+  },
   "devDependencies": {
+    "babel-eslint": "^6.0.0",
     "eslint": "^2.7.0"
   },
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
       "./index.js"
-    ]
+    ],
+    "rules": {
+      "quote-props": [2, "always"]
+    }
   }
 }
